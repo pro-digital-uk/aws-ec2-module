@@ -99,6 +99,6 @@ resource "aws_instance" "this" {
 
   lifecycle {
     # A newer "latest" AMI must not silently replace a running instance.
-    create_before_destroy
+    create_before_destroy = true
   }
 }
